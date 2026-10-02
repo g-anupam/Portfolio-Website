@@ -52,8 +52,8 @@ export function Hero() {
           </div>
           {photo.caption && (
             <figcaption className="text-muted flex justify-between gap-4 font-mono text-xs">
-              <span>Fig. 1</span>
-              <span>{photo.caption}</span>
+              <span className="shrink-0">Fig. 1</span>
+              <span className="text-right">{photo.caption}</span>
             </figcaption>
           )}
         </figure>

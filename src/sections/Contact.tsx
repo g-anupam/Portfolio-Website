@@ -1,6 +1,5 @@
 import { ArrowLink } from "@/components/ArrowLink";
 import { Label } from "@/components/Label";
-import { profile } from "@/content/profile";
 import { site } from "@/lib/site";
 
 export function Contact() {
@@ -14,18 +13,7 @@ export function Contact() {
         Say hello.
       </h2>
       <div className="flex flex-wrap items-baseline gap-x-10 gap-y-2 text-[clamp(20px,2.4vw,28px)] font-medium">
-        {profile.email && (
-          <a
-            href={`mailto:${profile.email}`}
-            className="text-accent py-2 underline decoration-1 underline-offset-[5px] hover:decoration-2"
-          >
-            {profile.email}
-          </a>
-        )}
-        <ArrowLink
-          href={site.links.linkedin}
-          className={profile.email ? "" : "text-accent"}
-        >
+        <ArrowLink href={site.links.linkedin} className="text-accent">
           LinkedIn
         </ArrowLink>
         <ArrowLink href={site.links.github}>GitHub</ArrowLink>
