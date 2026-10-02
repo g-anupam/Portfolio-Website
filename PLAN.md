@@ -21,15 +21,15 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 ## Phase 1 — Design system
 
-- [ ] 4. Colour tokens for light and dark as CSS variables
-- [ ] 5. Fonts (Bricolage Grotesque, Hanken Grotesk, JetBrains Mono) via `next/font`
-- [ ] 6. Theme toggle: follows system, remembers choice, no flash on load
-- [ ] 7. Shared primitives: container, section header, mono label, arrow link
+- [x] 4. Colour tokens for light and dark as CSS variables
+- [x] 5. Fonts (Bricolage Grotesque, Hanken Grotesk, JetBrains Mono) via `next/font`
+- [x] 6. Theme toggle: follows system, remembers choice, no flash on load
+- [x] 7. Shared primitives: container, section header, mono label, arrow link
 
 ## Phase 2 — Page shell
 
-- [ ] 8. Header and nav, including mobile
-- [ ] 9. Footer
+- [x] 8. Header and nav, including mobile (the Résumé link is added in step 20, with the PDF)
+- [x] 9. Footer
 
 ## Phase 3 — Content model
 
