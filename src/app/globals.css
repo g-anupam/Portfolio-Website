@@ -14,6 +14,13 @@
   --term-bg: #121412;
   --term-fg: #eceee8;
   --term-muted: #a3a89f;
+
+  /* Heatmap ramp: empty cell, then four steps towards the accent. */
+  --heat-0: #e1e4dc;
+  --heat-1: color-mix(in srgb, var(--accent) 30%, var(--heat-0));
+  --heat-2: color-mix(in srgb, var(--accent) 55%, var(--heat-0));
+  --heat-3: color-mix(in srgb, var(--accent) 80%, var(--heat-0));
+  --heat-4: var(--accent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +36,7 @@
     --term-bg: #1c1f1b;
     --term-fg: #eceee8;
     --term-muted: #a3a89f;
+    --heat-0: #1e221d;
   }
 }
 
@@ -44,6 +52,7 @@
   --term-bg: #1c1f1b;
   --term-fg: #eceee8;
   --term-muted: #a3a89f;
+  --heat-0: #1e221d;
 }
 
 @theme inline {
@@ -60,6 +69,11 @@
   --color-term-bg: var(--term-bg);
   --color-term-fg: var(--term-fg);
   --color-term-muted: var(--term-muted);
+  --color-heat-0: var(--heat-0);
+  --color-heat-1: var(--heat-1);
+  --color-heat-2: var(--heat-2);
+  --color-heat-3: var(--heat-3);
+  --color-heat-4: var(--heat-4);
 }
 
 @layer base {

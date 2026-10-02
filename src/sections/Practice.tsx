@@ -3,6 +3,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { profile } from "@/content/profile";
 import { getLeetCode } from "@/lib/leetcode";
 import { buildPracticeYear } from "@/lib/practice";
+import { Heatmap, HeatmapLegend } from "./Heatmap";
 
 function Stat({ value, label }: { value: number; label: string }) {
   return (
@@ -18,6 +19,7 @@ function Stat({ value, label }: { value: number; label: string }) {
 export async function Practice() {
   const data = await getLeetCode(profile.leetcodeUsername);
   const year = buildPracticeYear(data.calendar, new Date(data.fetchedAt));
+  const heading = `${year.submissions} LeetCode submissions in the last 12 months`;
   const difficulties = [
     { label: "Easy", count: data.solved.easy },
     { label: "Medium", count: data.solved.medium },
@@ -53,6 +55,17 @@ export async function Practice() {
             </div>
           ))}
         </dl>
+      </div>
+
+      <div className="border-rule flex flex-col gap-5 border-t pt-7">
+        <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
+          <h3 className="font-semibold">{heading}</h3>
+          <HeatmapLegend />
+        </div>
+        <Heatmap
+          weeks={year.weeks}
+          summary={`${heading}, shown as a calendar heatmap.`}
+        />
       </div>
     </section>
   );
