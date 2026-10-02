@@ -47,6 +47,9 @@
 }
 
 @theme inline {
+  --font-display: var(--font-bricolage), sans-serif;
+  --font-sans: var(--font-hanken), sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
   --color-bg: var(--bg);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
