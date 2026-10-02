@@ -6,6 +6,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { href: "/#work", label: "Work" },
+  { href: "/#experience", label: "Experience" },
   { href: "/#practice", label: "Practice" },
   { href: "/#contact", label: "Contact" },
 ];
@@ -36,6 +37,8 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+          </nav>
+          <div className="ml-auto flex items-center gap-x-6 sm:ml-0">
             {profile.resume && (
               <a
                 href={profile.resume}
@@ -47,8 +50,6 @@ export function Header() {
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             )}
-          </nav>
-          <div className="ml-auto sm:ml-0">
             <ThemeToggle />
           </div>
         </div>
