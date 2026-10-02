@@ -17,7 +17,7 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 - [x] 1. Scaffold Next.js + TypeScript + Tailwind, ESLint and Prettier
 - [x] 2. Folder structure, base layout, page metadata, this plan
-- [ ] 3. First deploy to Vercel
+- [x] 3. First deploy to Vercel
 
 ## Phase 1 — Design system
 
@@ -59,4 +59,4 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 ## Phase 7 — Polish and launch
 
 - [x] 22. Open Graph image, favicon, sitemap, accessibility and performance pass
-- [ ] 23. Custom domain (optional)
+- [x] 23. Custom domain: www.anupamg.in (anupamg.in redirects to it)
