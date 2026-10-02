@@ -2,7 +2,6 @@ import { ArrowLink } from "@/components/ArrowLink";
 import { Container } from "@/components/Container";
 import { Label } from "@/components/Label";
 import { SectionHeader } from "@/components/SectionHeader";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { site } from "@/lib/site";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
           <ArrowLink href={site.links.github}>GitHub</ArrowLink>
           <ArrowLink href={site.links.leetcode}>LeetCode</ArrowLink>
           <ArrowLink href={site.links.linkedin}>LinkedIn</ArrowLink>
-          <ThemeToggle />
         </div>
         <div className="border-ink border-t pt-10">
           <SectionHeader title="Selected work" label="01 — Projects" />
