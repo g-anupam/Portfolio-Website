@@ -1,7 +1,7 @@
 // Site-wide facts used by metadata and page content.
 export const site = {
   name: "Anupam G",
-  title: "Anupam G — Projects and DSA practice",
+  title: "Anupam G",
   description:
     "Portfolio of Anupam G: selected projects and data structures and algorithms practice.",
   // Canonical address, used for the sitemap, robots file and social previews.
