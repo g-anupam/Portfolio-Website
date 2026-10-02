@@ -8,8 +8,10 @@ import { Heatmap, HeatmapLegend } from "./Heatmap";
 
 function Stat({ value, label }: { value: number; label: string }) {
   return (
-    <div className="flex flex-col-reverse gap-2 pt-6 pb-7">
-      <Label as="dt">{label}</Label>
+    <div className="flex flex-col gap-2 pt-6 pb-7">
+      <Label as="dt" className="order-last">
+        {label}
+      </Label>
       <dd className="font-display text-[clamp(40px,5vw,56px)] leading-none font-bold tracking-[-0.03em]">
         {value}
       </dd>
@@ -73,6 +75,18 @@ export async function Practice() {
           weeks={year.weeks}
           summary={`${heading}, shown as a calendar heatmap.`}
         />
+        <p className="text-muted font-mono text-xs">
+          <a
+            href={site.links.leetcode}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="-my-3 py-3 underline decoration-1 underline-offset-[5px] hover:decoration-2"
+          >
+            leetcode.com/u/{data.username}
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>{" "}
+          · updated <time dateTime={data.fetchedAt}>{updated}</time>
+        </p>
       </div>
     </section>
   );

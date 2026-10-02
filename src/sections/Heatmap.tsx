@@ -44,7 +44,11 @@ export function Heatmap({
   }
 
   return (
-    <div className="overflow-x-auto pb-2" onScroll={() => setTooltip(null)}>
+    <div
+      ref={scroller}
+      className="overflow-x-auto pb-2"
+      onScroll={() => setTooltip(null)}
+    >
       <div
         role="img"
         aria-label={summary}
