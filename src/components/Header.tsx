@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { profile } from "@/content/profile";
 import { site } from "@/lib/site";
 import { Container } from "./Container";
 import { ThemeToggle } from "./ThemeToggle";
@@ -35,6 +36,17 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            {profile.resume && (
+              <a
+                href={profile.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-3.5 underline decoration-1 underline-offset-[5px] hover:decoration-2"
+              >
+                Résumé <span aria-hidden="true">↗</span>
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            )}
           </nav>
           <div className="ml-auto sm:ml-0">
             <ThemeToggle />

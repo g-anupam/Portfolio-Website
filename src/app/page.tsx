@@ -11,7 +11,7 @@ export const revalidate = 21600;
 
 export default function Home() {
   return (
-    <main id="top" className="flex-1">
+    <main id="top" tabIndex={-1} className="flex-1 outline-none">
       <Container>
         <Hero />
         <Glance />

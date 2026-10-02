@@ -28,7 +28,7 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 ## Phase 2 — Page shell
 
-- [x] 8. Header and nav, including mobile (the Résumé link is added in step 20, with the PDF)
+- [x] 8. Header and nav, including mobile
 - [x] 9. Footer
 
 ## Phase 3 — Content model
@@ -52,10 +52,11 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 ## Phase 6 — Assets and copy
 
-- [ ] 20. Photo, QuickByte screenshot, KafFlow and psh diagrams, résumé PDF
-- [ ] 21. About text, at-a-glance facts, DSA intro line, email
+- [x] 20a. QuickByte screenshot, KafFlow and psh diagrams
+- [ ] 20b. Photo and résumé PDF (set `photo` and `resume` in `src/content/profile.ts`; the Résumé nav link appears once `resume` is set)
+- [ ] 21. About text, at-a-glance facts, DSA intro line, email (all in `src/content/profile.ts`; each shows up on the page once filled)
 
 ## Phase 7 — Polish and launch
 
-- [ ] 22. Open Graph image, favicon, sitemap, accessibility and performance pass
+- [x] 22. Open Graph image, favicon, sitemap, accessibility and performance pass
 - [ ] 23. Custom domain (optional)

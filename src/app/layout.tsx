@@ -39,6 +39,8 @@ export const metadata: Metadata = {
     title: site.title,
     description: site.description,
   },
+  twitter: { card: "summary_large_image" },
+  alternates: { canonical: "/" },
 };
 
 export const viewport: Viewport = {
@@ -61,6 +63,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="flex min-h-full flex-col font-sans text-[17px] leading-[1.55]">
+        <a
+          href="#top"
+          className="bg-ink text-bg sr-only z-30 px-4 py-3 font-medium focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+        >
+          Skip to content
+        </a>
         <Header />
         {children}
         <Footer />
