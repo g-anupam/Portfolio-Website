@@ -33,7 +33,7 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 ## Phase 3 — Content model
 
-- [ ] 10. Typed data file for projects, links and site info
+- [x] 10. Typed data file for projects, links and site info
 
 ## Phase 4 — Static sections
 
