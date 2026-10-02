@@ -1,3 +1,4 @@
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { site } from "@/lib/site";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         {site.name}
       </h1>
       <p>Projects and DSA practice, coming soon.</p>
+      <ThemeToggle />
     </main>
   );
 }

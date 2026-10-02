@@ -5,6 +5,7 @@ import {
   JetBrains_Mono,
 } from "next/font/google";
 import { site } from "@/lib/site";
+import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({
@@ -52,7 +53,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${display.variable} ${sans.variable} ${mono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="flex min-h-full flex-col font-sans text-[17px] leading-[1.55]">
         {children}
       </body>
