@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type PointerEvent } from "react";
+import { useEffect, useRef, useState, type PointerEvent } from "react";
 import type { HeatmapWeek } from "@/lib/practice";
 
 const levelClass = [
@@ -24,6 +24,13 @@ export function Heatmap({
   summary: string;
 }) {
   const [tooltip, setTooltip] = useState<Tooltip | null>(null);
+  const scroller = useRef<HTMLDivElement>(null);
+
+  // On narrow screens the graph scrolls sideways; start at the most recent weeks.
+  useEffect(() => {
+    const element = scroller.current;
+    if (element) element.scrollLeft = element.scrollWidth;
+  }, []);
 
   function showTooltip(event: PointerEvent<HTMLDivElement>) {
     const cell = event.target as HTMLElement;

@@ -45,10 +45,10 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 ## Phase 5 — LeetCode
 
-- [ ] 16. Server-side fetch from LeetCode GraphQL, typed, cached, with a committed fallback snapshot
-- [ ] 17. Stats row
-- [ ] 18. Heatmap: labels, legend, tooltips, both themes
-- [ ] 19. Mobile behaviour and "last updated" line
+- [x] 16. Server-side fetch from LeetCode GraphQL, typed, cached, with a committed fallback snapshot
+- [x] 17. Stats row
+- [x] 18. Heatmap: labels, legend, tooltips, both themes
+- [x] 19. Mobile behaviour and "last updated" line
 
 ## Phase 6 — Assets and copy
 

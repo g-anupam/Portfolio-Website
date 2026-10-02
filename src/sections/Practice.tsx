@@ -2,6 +2,7 @@ import { Label } from "@/components/Label";
 import { SectionHeader } from "@/components/SectionHeader";
 import { profile } from "@/content/profile";
 import { getLeetCode } from "@/lib/leetcode";
+import { site } from "@/lib/site";
 import { buildPracticeYear } from "@/lib/practice";
 import { Heatmap, HeatmapLegend } from "./Heatmap";
 
@@ -20,6 +21,12 @@ export async function Practice() {
   const data = await getLeetCode(profile.leetcodeUsername);
   const year = buildPracticeYear(data.calendar, new Date(data.fetchedAt));
   const heading = `${year.submissions} LeetCode submissions in the last 12 months`;
+  const updated = new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(data.fetchedAt));
   const difficulties = [
     { label: "Easy", count: data.solved.easy },
     { label: "Medium", count: data.solved.medium },
