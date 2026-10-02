@@ -50,10 +50,12 @@ export function Hero() {
               className="object-cover"
             />
           </div>
-          <figcaption className="text-muted flex justify-between gap-4 font-mono text-xs">
-            <span>Fig. 1</span>
-            <span>{photo.caption}</span>
-          </figcaption>
+          {photo.caption && (
+            <figcaption className="text-muted flex justify-between gap-4 font-mono text-xs">
+              <span>Fig. 1</span>
+              <span>{photo.caption}</span>
+            </figcaption>
+          )}
         </figure>
       )}
     </section>

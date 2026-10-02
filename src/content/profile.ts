@@ -6,7 +6,7 @@ export type Profile = {
   /** About paragraphs for the hero. */
   about: string[];
   /** Portrait in /public, 4:5. */
-  photo: { src: string; alt: string; caption: string } | null;
+  photo: { src: string; alt: string; caption: string | null } | null;
   /** At-a-glance strip under the hero. */
   facts: Fact[];
   /** One line under the DSA heading. */
@@ -21,10 +21,14 @@ export type Profile = {
 export const profile: Profile = {
   tagline: null,
   about: [],
-  photo: null,
+  photo: {
+    src: "/anupam.jpg",
+    alt: "Anupam G smiling, in a black IEEE student branch hoodie",
+    caption: null,
+  },
   facts: [],
   practiceIntro: null,
   email: null,
-  resume: null,
+  resume: "/resume.pdf",
   leetcodeUsername: "anupam2606",
 };
