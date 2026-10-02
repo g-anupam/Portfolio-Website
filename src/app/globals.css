@@ -1,1 +1,72 @@
 @import "tailwindcss";
+
+/* Colour tokens. Light is the default; dark applies when the system asks for
+   it, unless the visitor has picked a theme (data-theme on <html>). */
+:root {
+  color-scheme: light;
+  --bg: #f2f3ef;
+  --ink: #121412;
+  --muted: #565a55;
+  --rule: #cdd0c8;
+  --fill: #d9dcd4;
+  --accent: #2340f0;
+  --on-accent: #ffffff;
+  --term-bg: #121412;
+  --term-fg: #eceee8;
+  --term-muted: #a3a89f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #101210;
+    --ink: #eceee8;
+    --muted: #a3a89f;
+    --rule: #2c302b;
+    --fill: #1c1f1b;
+    --accent: #8c9bff;
+    --on-accent: #101210;
+    --term-bg: #1c1f1b;
+    --term-fg: #eceee8;
+    --term-muted: #a3a89f;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #101210;
+  --ink: #eceee8;
+  --muted: #a3a89f;
+  --rule: #2c302b;
+  --fill: #1c1f1b;
+  --accent: #8c9bff;
+  --on-accent: #101210;
+  --term-bg: #1c1f1b;
+  --term-fg: #eceee8;
+  --term-muted: #a3a89f;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-fill: var(--fill);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-term-bg: var(--term-bg);
+  --color-term-fg: var(--term-fg);
+  --color-term-muted: var(--term-muted);
+}
+
+@layer base {
+  body {
+    background: var(--bg);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
