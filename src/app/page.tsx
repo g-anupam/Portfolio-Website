@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import { Glance } from "@/sections/Glance";
 import { Hero } from "@/sections/Hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main id="top" className="flex-1">
       <Container>
         <Hero />
+        <Glance />
       </Container>
     </main>
   );
