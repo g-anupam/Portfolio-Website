@@ -13,3 +13,7 @@ pnpm dev
 Other scripts: `pnpm build`, `pnpm lint`, `pnpm typecheck`, `pnpm format`.
 
 Page content lives in `src/content/`. The build plan lives in [PLAN.md](PLAN.md).
+
+## Contact form
+
+The form emails messages through [Resend](https://resend.com). It needs `RESEND_API_KEY` and `CONTACT_TO_EMAIL`; see `.env.example`. Without them the form is hidden.

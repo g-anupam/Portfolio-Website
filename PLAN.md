@@ -54,9 +54,14 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 - [x] 20a. QuickByte screenshot, KafFlow and psh diagrams
 - [x] 20b. Photo and résumé PDF (`photo` and `resume` in `src/content/profile.ts`)
-- [ ] 21. About text, at-a-glance facts, DSA intro line, email (all in `src/content/profile.ts`; each shows up on the page once filled)
+- [x] 21. About text, tagline, at-a-glance facts, DSA intro line, photo caption
 
 ## Phase 7 — Polish and launch
 
 - [x] 22. Open Graph image, favicon, sitemap, accessibility and performance pass
 - [x] 23. Custom domain: www.anupamg.in (anupamg.in redirects to it)
+
+## Phase 8 — Additions
+
+- [x] 24. Experience section
+- [x] 25. Contact form that emails messages through Resend (needs `RESEND_API_KEY` and `CONTACT_TO_EMAIL` in Vercel)

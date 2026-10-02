@@ -38,7 +38,7 @@ export const experience: Experience[] = [
   },
   {
     role: "2nd place, Ingenious Hackathon",
-    organisation: "Hackathon",
+    organisation: "Award",
     period: null,
     summary:
       "Built a C/Python AST parser that inserts missing free() calls to prevent memory leaks in legacy code.",
