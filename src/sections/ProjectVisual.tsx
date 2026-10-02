@@ -1,7 +1,10 @@
 import type { Project } from "@/content/projects";
+import { TerminalPanel } from "./TerminalPanel";
 
-// Stand-in until each project's real image or diagram lands (plan step 20).
+// Screenshot and diagrams are stand-ins until the real ones land (plan step 20).
 export function ProjectVisual({ project }: { project: Project }) {
+  if (project.visual === "terminal") return <TerminalPanel />;
+
   return (
     <div
       aria-hidden="true"
