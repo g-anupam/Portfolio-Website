@@ -27,7 +27,7 @@ export const profile: Profile = {
   photo: {
     src: "/anupam.jpg",
     alt: "Anupam G smiling, in a black IEEE student branch hoodie",
-    caption: "CTF 2026, hosted by IEEE SB, PESU ECC · October 2025",
+    caption: "CTF 2025, hosted by IEEE SB, PESU ECC · October 2025",
   },
   facts: [
     { label: "Studying", value: "B.Tech CSE, PES University, 2027" },

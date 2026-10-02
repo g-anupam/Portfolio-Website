@@ -40,7 +40,7 @@ export async function Practice() {
       <div className="pb-5">
         <SectionHeader
           title="Data structures &amp; algorithms"
-          label="03 — Practice"
+          label="04 — Practice"
         />
       </div>
       {profile.practiceIntro && (

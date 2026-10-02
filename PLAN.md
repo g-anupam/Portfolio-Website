@@ -63,5 +63,5 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 ## Phase 8 — Additions
 
-- [x] 24. Experience section
+- [x] 24. Experience and volunteering sections
 - [x] 25. Contact form that emails messages through Resend (needs `RESEND_API_KEY` and `CONTACT_TO_EMAIL` in Vercel)

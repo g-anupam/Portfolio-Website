@@ -1,14 +1,25 @@
 import { SectionHeader } from "@/components/SectionHeader";
-import { experience } from "@/content/experience";
+import type { TimelineItem } from "@/content/experience";
 
-export function ExperienceSection() {
+// Dated list of roles, used for both experience and volunteering.
+export function Timeline({
+  id,
+  title,
+  label,
+  items,
+}: {
+  id: string;
+  title: string;
+  label: string;
+  items: TimelineItem[];
+}) {
   return (
-    <section id="experience" className="scroll-mt-6 pt-[clamp(72px,9vw,120px)]">
+    <section id={id} className="scroll-mt-6 pt-[clamp(72px,9vw,120px)]">
       <div className="pb-10">
-        <SectionHeader title="Experience" label="02 — Experience" />
+        <SectionHeader title={title} label={label} />
       </div>
       <ol className="border-rule border-b">
-        {experience.map((item) => (
+        {items.map((item) => (
           <li
             key={item.role}
             className="border-rule first:border-ink flex flex-wrap gap-x-10 gap-y-3 border-t py-7"

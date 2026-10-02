@@ -12,7 +12,7 @@ export function Contact() {
       id="contact"
       className="flex scroll-mt-6 flex-col gap-7 pt-[clamp(88px,11vw,140px)] pb-[clamp(64px,7vw,96px)]"
     >
-      <Label>04 — Contact</Label>
+      <Label>05 — Contact</Label>
       <h2 className="font-display text-[clamp(56px,8.4vw,120px)] leading-[0.9] font-extrabold tracking-[-0.045em]">
         Say hello.
       </h2>
