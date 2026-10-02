@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import { Contact } from "@/sections/Contact";
 import { Glance } from "@/sections/Glance";
 import { Hero } from "@/sections/Hero";
 
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <Glance />
         <Work />
+        <Contact />
       </Container>
     </main>
   );

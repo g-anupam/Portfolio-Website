@@ -37,11 +37,11 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 ## Phase 4 — Static sections
 
-- [ ] 11. Hero: name, about slot, links, photo slot
-- [ ] 12. At-a-glance strip
-- [ ] 13. QuickByte lead block with the live-app button
-- [ ] 14. Project rows (NaturalShell, KafFlow, psh)
-- [ ] 15. Contact section
+- [x] 11. Hero: name, about slot, links, photo slot
+- [x] 12. At-a-glance strip
+- [x] 13. QuickByte lead block with the live-app button
+- [x] 14. Project rows (NaturalShell, KafFlow, psh)
+- [x] 15. Contact section
 
 ## Phase 5 — LeetCode
 
