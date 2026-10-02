@@ -10,6 +10,8 @@ export type Project = {
   /** Set when the project is deployed somewhere visitors can use it. */
   liveUrl?: string;
   visual: ProjectVisual;
+  /** Screenshot in /public, used when visual is "screenshot". */
+  image?: { src: string; alt: string };
 };
 
 // Order here is the order on the page. The first project gets the lead block.
@@ -23,6 +25,10 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/g-anupam/QuickBite",
     liveUrl: "https://quick-bite-inky.vercel.app",
     visual: "screenshot",
+    image: {
+      src: "/projects/quickbyte.jpg",
+      alt: "QuickByte home page: “Delicious food, delivered fast” beside a delivery illustration",
+    },
   },
   {
     slug: "naturalshell",

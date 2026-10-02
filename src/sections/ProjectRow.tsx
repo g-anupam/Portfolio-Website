@@ -34,7 +34,7 @@ export function ProjectRow({
         </div>
       </div>
       <div className="aspect-[8/5] max-w-[360px] min-w-0 flex-[1_1_280px]">
-        <ProjectVisual project={project} />
+        <ProjectVisual project={project} sizes="360px" />
       </div>
     </article>
   );

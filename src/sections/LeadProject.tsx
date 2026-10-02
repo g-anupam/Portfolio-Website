@@ -52,7 +52,10 @@ export function LeadProject({
       </div>
       <figure className="flex min-w-0 flex-[1.4_1_480px] flex-col gap-2.5">
         <div className="aspect-[16/10]">
-          <ProjectVisual project={project} />
+          <ProjectVisual
+            project={project}
+            sizes="(min-width: 1100px) 600px, 100vw"
+          />
         </div>
         {liveHost && (
           <figcaption className="text-muted font-mono text-xs">
