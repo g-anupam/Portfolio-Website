@@ -60,6 +60,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head>
+        {/* The site has its own dark theme; this stops the Dark Reader extension recolouring it. */}
+        <meta name="darkreader-lock" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="flex min-h-full flex-col font-sans text-[17px] leading-[1.55]">
