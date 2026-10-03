@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { profile } from "@/content/profile";
 import { getLeetCode } from "@/lib/leetcode";
 import { site } from "@/lib/site";
-import { buildPracticeYear } from "@/lib/practice";
+import { buildPracticeYear, formatDate } from "@/lib/practice";
 import { Heatmap, HeatmapLegend } from "./Heatmap";
 
 function Stat({ value, label }: { value: number; label: string }) {
@@ -23,12 +23,7 @@ export async function Practice() {
   const data = await getLeetCode(profile.leetcodeUsername);
   const year = buildPracticeYear(data.calendar, new Date(data.fetchedAt));
   const heading = `${year.submissions} LeetCode submissions in the last 12 months`;
-  const updated = new Intl.DateTimeFormat("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(data.fetchedAt));
+  const updated = formatDate(data.fetchedAt);
   const difficulties = [
     { label: "Easy", count: data.solved.easy },
     { label: "Medium", count: data.solved.medium },
@@ -88,6 +83,43 @@ export async function Practice() {
           · updated <time dateTime={data.fetchedAt}>{updated}</time>
         </p>
       </div>
+
+      {data.recent.length > 0 && (
+        <div className="pt-16">
+          <h3 className="pb-4 font-semibold">Recently solved</h3>
+          <ol className="border-rule border-b">
+            {data.recent.map((problem) => (
+              <li
+                key={problem.slug}
+                className="border-rule first:border-ink border-t"
+              >
+                <a
+                  href={`https://leetcode.com/problems/${problem.slug}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+                >
+                  <span className="text-xl font-medium underline-offset-[5px] group-hover:underline">
+                    {problem.number && (
+                      <span className="text-muted font-mono text-base">
+                        {problem.number}.{" "}
+                      </span>
+                    )}
+                    {problem.title}
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </span>
+                  <span className="text-muted font-mono text-[13px]">
+                    {problem.difficulty && <>{problem.difficulty} · </>}
+                    <time dateTime={problem.solvedAt}>
+                      {formatDate(problem.solvedAt)}
+                    </time>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
     </section>
   );
 }

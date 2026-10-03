@@ -37,6 +37,12 @@ export type PracticeYear = {
   longestStreak: number;
 };
 
+/** "3 Oct 2026", in UTC to match LeetCode's calendar. */
+export function formatDate(iso: string) {
+  const date = new Date(iso);
+  return `${date.getUTCDate()} ${MONTHS[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
+}
+
 function levelFor(count: number): HeatmapDay["level"] {
   if (count === 0) return 0;
   if (count <= 2) return 1;

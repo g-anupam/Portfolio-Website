@@ -1,13 +1,12 @@
 {
   "username": "anupam2606",
   "solved": {
-    "all": 235,
+    "all": 236,
     "easy": 78,
-    "medium": 141,
+    "medium": 142,
     "hard": 16
   },
   "calendar": {
-    "1759363200": 2,
     "1759708800": 3,
     "1759795200": 3,
     "1759881600": 1,
@@ -70,7 +69,31 @@
     "1789862400": 15,
     "1789948800": 1,
     "1790035200": 11,
-    "1790208000": 2
+    "1790208000": 2,
+    "1790985600": 2
   },
-  "fetchedAt": "2026-10-02T12:55:16.000Z"
+  "recent": [
+    {
+      "title": "Longest Consecutive Sequence",
+      "slug": "longest-consecutive-sequence",
+      "number": "128",
+      "difficulty": "Medium",
+      "solvedAt": "2026-10-03T14:45:32.000Z"
+    },
+    {
+      "title": "Subarray Sum Equals K",
+      "slug": "subarray-sum-equals-k",
+      "number": "560",
+      "difficulty": "Medium",
+      "solvedAt": "2026-09-24T00:24:02.000Z"
+    },
+    {
+      "title": "Two Sum",
+      "slug": "two-sum",
+      "number": "1",
+      "difficulty": "Easy",
+      "solvedAt": "2026-09-24T00:03:50.000Z"
+    }
+  ],
+  "fetchedAt": "2026-10-03T16:17:46.000Z"
 }
