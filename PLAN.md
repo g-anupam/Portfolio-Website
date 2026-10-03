@@ -65,3 +65,5 @@ Stack: Next.js (App Router) + TypeScript, Tailwind v4, pnpm, deployed on Vercel.
 
 - [x] 24. Experience and volunteering sections
 - [x] 25. Contact form that emails messages through Resend (needs `RESEND_API_KEY` and `CONTACT_TO_EMAIL` in Vercel)
+- [x] 26. Recently solved LeetCode problems
+- [x] 27. In-site résumé page at /resume (renders public/resume.pdf with react-pdf)

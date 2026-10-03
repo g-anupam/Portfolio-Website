@@ -40,15 +40,12 @@ export function Header() {
           </nav>
           <div className="ml-auto flex items-center gap-x-6 sm:ml-0">
             {profile.resume && (
-              <a
-                href={profile.resume}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="py-3.5 underline decoration-1 underline-offset-[5px] hover:decoration-2"
+              <Link
+                href="/resume"
+                className="py-3.5 decoration-1 underline-offset-[5px] hover:underline"
               >
-                Résumé <span aria-hidden="true">↗</span>
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
+                Résumé
+              </Link>
             )}
             <ThemeToggle />
           </div>
